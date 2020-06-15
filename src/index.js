@@ -5,10 +5,11 @@ import thunk from 'redux-thunk'
 import { Provider } from 'react-redux'
 
 import App from './App'
+import moodReducer from './reducers/moodReducer'
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 
-let store = createStore(reducer, composeEnhancers(applyMiddleware(thunk)))
+let store = createStore(moodReducer, composeEnhancers(applyMiddleware(thunk)))
 
 ReactDOM.render(
   <Provider store={store}>
