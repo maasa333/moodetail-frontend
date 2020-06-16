@@ -1,20 +1,17 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux'
+
+import MoodsContainer from './containers/MoodsContainer';
 
 class App extends Component {
-
-  // componentDidMount() {
-  //   return fetch('http://localhost:3001/api/v1/moods')
-  //   .then(response => response.json())
-  //   .then(data => console.log(data))
-  // }
 
   render() {
     return (
       <div>
-        App 
+        <MoodsContainer />
       </div>
     );
   }
 }
 
-export default App;
+export default connect()(App)
