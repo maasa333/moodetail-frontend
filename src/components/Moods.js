@@ -5,7 +5,7 @@ const Moods = props => {
 
     return (
         <div>
-            {props.moods.map(mood => <Mood key={mood.id} feeling={mood.feeling} />)}
+            {props.moods.map(mood => <Mood key={mood.id} feeling={mood.feeling} moodID={mood.id} /> )}
         </div>
     );
 }

@@ -4,7 +4,7 @@ import Prompt from '../components/Prompt'
 const Prompts = props => {
     return (
         <div>
-            <Prompt />
+            PromptsComponent
         </div>
     );
 }

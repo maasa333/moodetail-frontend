@@ -4,8 +4,9 @@ import PromptsContainer from '../containers/PromptsContainer';
 const Mood = props => {
     return (
         <div>
-            {props.feeling}
+            {props.feeling} - {props.moodID}
             <PromptsContainer />
+            <br/>
         </div>
     )
 }
