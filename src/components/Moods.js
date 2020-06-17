@@ -3,11 +3,9 @@ import Mood from './Mood';
 
 const Moods = props => {
 
-    // const mood = (props.moods.map(mood => <Mood feeling={mood.feeling} />))
-
     return (
         <div>
-            {props.moods.map(mood => <Mood feeling={mood.feeling} />)}
+            {props.moods.map(mood => <Mood key={mood.id} feeling={mood.feeling} />)}
         </div>
     );
 }
