@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import {Route} from 'react-router-dom';
 import Moods from '../components/Moods';
 import {fetchMoods} from '../actions/fetchMoods';
 
@@ -12,7 +13,8 @@ class MoodsContainer extends Component {
     render() {
         return (
             <div>
-                <Moods moods={this.props.moods} />
+                <Route path='/moods' render={() => <Moods moods={this.props.moods} />} />
+                {/* <Moods moods={this.props.moods} /> */}
             </div>
         );
     }
