@@ -5,7 +5,7 @@ const Prompts = props => {
     // console.log(props)
     return (
         <div>
-            {/* {props.prompts.map(prompt => <Prompt prompt={prompt.desc} />)} */}
+            <ul>{props.prompts.map(prompt => <li key={prompt.id}><Prompt prompt={prompt.desc} moodID={prompt.moodID} /></li>)}</ul>
         </div>
     );
 }

@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import {Route} from 'react-router-dom';
+// import {Route} from 'react-router-dom';
 import Moods from '../components/Moods';
+// import Mood from '../components/Mood';
 import {fetchMoods} from '../actions/fetchMoods';
 
 class MoodsContainer extends Component {
@@ -12,10 +13,12 @@ class MoodsContainer extends Component {
 
     render() {
         return (
-            <div>
-                <Route path='/moods' render={() => <Moods moods={this.props.moods} />} />
+            <>
+                <Moods moods={this.props.moods} />
+                {/* <Route exact path='/moods' render={(routerProps) => <Moods {...routerProps} moods={this.props.moods} />} /> */}
+                {/* <Route exact path='/moods/:id' render={(routerProps) => <Mood {...routerProps} moods={this.props.moods} />} /> */}
                 {/* <Moods moods={this.props.moods} /> */}
-            </div>
+            </>
         );
     }
 }
