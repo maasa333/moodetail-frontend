@@ -1,6 +1,7 @@
-export const addPrompt = data => {
-    return (dispatch) => {
-        fetch('http://localhost:3001/api/v1/moods/{mood_id}/prompts', {
+export const addPrompt = (data) => {
+    // console.log(data)
+    return dispatch => {
+        fetch(`'http://localhost:3001/api/v1/moods/${data}/prompts'`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

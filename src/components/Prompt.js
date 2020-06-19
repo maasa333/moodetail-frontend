@@ -1,10 +1,10 @@
 import React from 'react';
 
 const Prompt = props => {
-    // console.log(props)
+    console.log(props)
     return (
         <div>
-            Prompt
+            {props.prompt}
         </div>
     );
 }

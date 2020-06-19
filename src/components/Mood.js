@@ -8,12 +8,11 @@ const Mood = props => {
     // console.log(props)
 
     return (
-        <div>
+        <>
             {props.feeling}
-            {/* <PromptsContainer moodID={props.moodID} prompts={props.prompts} /> */}
             <PromptsContainer moodID={props.id} prompts={props.prompts} />
             {/* {mood ? mood.feeling : null} */}
-        </div>
+        </>
     )
 }
 
