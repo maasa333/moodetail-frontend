@@ -10,7 +10,7 @@ class PromptInput extends Component {
         desc: ''
     }
 
-    renderMoodOptions = () => this.props.moods.map(mood => <option key={mood.id}>{mood.feeling}</option>)
+    renderMoodOptions = () => this.props.moods.map(mood => <option key={mood.id} value={mood.feeling}>{mood.feeling}</option>)
 
     handleOnChange = event => {
         this.setState({
@@ -20,7 +20,7 @@ class PromptInput extends Component {
 
     handleOnSelect = event => {
         this.setState({
-            mood_id: event.target.options.selectedIndex,
+            mood_id: event.target.options.selectedIndex + 1,
             mood: event.target.value
         })
     }
@@ -29,23 +29,23 @@ class PromptInput extends Component {
         event.preventDefault()
         this.props.addPrompt(this.state)
         this.setState({
+            mood: '',
             desc: ''
         })
     }
 
     render() {
-        // console.log(this.state)
+        console.log(this.state)
         return (
             <div>
-                <form onSubmit={this.handleOnSubmit}>
+                <form onSubmit={event => this.handleOnSubmit(event)}>
                     Select a mood:
-                    <select onChange={this.handleOnSelect}>
-                        <option>Select a Mood</option>
+                    <select onChange={event => this.handleOnSelect(event)} value={this.state.value}>
                         {this.renderMoodOptions()}
                     </select>
                     <br/>
                     <label>Describe what prompted this mood:</label>
-                    <input onChange={this.handleOnChange} name='desc' type='text' value={this.state.desc} />
+                    <input onChange={event => this.handleOnChange(event)} name='desc' type='text' value={this.state.desc} />
                     <br/>
                     <input type='submit' />
                 </form>
