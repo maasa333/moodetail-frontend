@@ -10,7 +10,7 @@ const Mood = props => {
     return (
         <>
             {props.feeling}
-            <PromptsContainer moodID={props.id} prompts={props.prompts} />
+            <PromptsContainer prompts={props.prompts} />
             {/* {mood ? mood.feeling : null} */}
         </>
     )

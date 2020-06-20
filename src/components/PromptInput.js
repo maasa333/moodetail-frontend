@@ -5,15 +5,23 @@ import {addPrompt} from '../actions/addPrompt';
 class PromptInput extends Component {
 
     state = {
-        moods: '',
+        mood_id: '',
+        mood: '',
         desc: ''
     }
 
-    renderMoodOptions = () => this.props.moods.map(mood => <option>{mood.feeling}</option>)
+    renderMoodOptions = () => this.props.moods.map(mood => <option key={mood.id}>{mood.feeling}</option>)
 
     handleOnChange = event => {
         this.setState({
             desc: event.target.value
+        })
+    }
+
+    handleOnSelect = event => {
+        this.setState({
+            mood_id: event.target.options.selectedIndex,
+            mood: event.target.value
         })
     }
 
@@ -26,13 +34,14 @@ class PromptInput extends Component {
     }
 
     render() {
-        console.log(this.props.moods.map(mood => mood))
+        // console.log(this.state)
         return (
             <div>
                 <form onSubmit={this.handleOnSubmit}>
                     Select a mood:
-                    <select>
-                    {this.renderMoodOptions()}
+                    <select onChange={this.handleOnSelect}>
+                        <option>Select a Mood</option>
+                        {this.renderMoodOptions()}
                     </select>
                     <br/>
                     <label>Describe what prompted this mood:</label>
