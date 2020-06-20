@@ -20,7 +20,7 @@ class PromptInput extends Component {
 
     handleOnSelect = event => {
         this.setState({
-            mood_id: event.target.options.selectedIndex + 1,
+            mood_id: event.target.options.selectedIndex,
             mood: event.target.value
         })
     }
@@ -41,6 +41,7 @@ class PromptInput extends Component {
                 <form onSubmit={event => this.handleOnSubmit(event)}>
                     Select a mood:
                     <select onChange={event => this.handleOnSelect(event)} value={this.state.value}>
+                        <option disabled selected>Select a mood</option>
                         {this.renderMoodOptions()}
                     </select>
                     <br/>

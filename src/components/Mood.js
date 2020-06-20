@@ -3,9 +3,8 @@ import PromptsContainer from '../containers/PromptsContainer';
 
 const Mood = props => {
 
-    // let mood = props.feeling[props.match.params.id -1]
-
-    // console.log(props)
+    // let mood = props.moods.filter(mood => mood.id === props.match.param.id)[0];
+    // console.log(mood)
 
     return (
         <>
