@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
-import {Route} from 'react-router-dom';
+import {Route, NavLink} from 'react-router-dom';
 import MoodsContainer from './containers/MoodsContainer';
 import PromptInput from './components/PromptInput';
 import {fetchMoods} from './actions/fetchMoods';
@@ -14,9 +14,11 @@ class App extends Component {
   render() {
     return (
       <div className='App'>
+        <NavLink to='/new'>New</NavLink>
         <Route exact path='/new' render={() => <PromptInput moods={this.props.moods} />} />
         {/* <PromptInput moods={this.props.moods} /> */}
         <br/>
+        <NavLink to='/moods'>All Moods</NavLink>
         <Route exact path='/moods' render={() => <MoodsContainer moods={this.props.moods}/>} />
         {/* <MoodsContainer moods={this.props.moods} /> */}
       </div>
