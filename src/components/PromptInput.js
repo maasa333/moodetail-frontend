@@ -35,13 +35,12 @@ class PromptInput extends Component {
     }
 
     render() {
-        console.log(this.state)
         return (
             <div>
                 <form onSubmit={event => this.handleOnSubmit(event)}>
                     Select a mood:
-                    <select onChange={event => this.handleOnSelect(event)} value={this.state.value}>
-                        <option disabled selected>Select a mood</option>
+                    <select defaultValue={'DEFAULT'} onChange={event => this.handleOnSelect(event)} value={this.state.value}>
+                        <option value='DEFAULT' disabled>Select a mood</option>
                         {this.renderMoodOptions()}
                     </select>
                     <br/>
@@ -58,6 +57,7 @@ class PromptInput extends Component {
 const mapStateToProps = state => {
     return {
         moods: state.moods
+        // prompts: state.prompts
     }
 }
 

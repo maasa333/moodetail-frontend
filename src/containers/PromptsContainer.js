@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 // import { connect } from 'react-redux';
-// import PromptInput from '../components/PromptInput';
 import Prompts from '../components/Prompts.js';
+// import PromptInput from '../components/PromptInput';
 
 class PromptsContainer extends Component {
 

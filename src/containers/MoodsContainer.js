@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 // import {Route} from 'react-router-dom';
 import Moods from '../components/Moods';
-// import Mood from '../components/Mood';
 import {fetchMoods} from '../actions/fetchMoods';
 
 class MoodsContainer extends Component {
