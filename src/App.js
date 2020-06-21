@@ -20,14 +20,13 @@ class App extends Component {
         <NavLink to='/new'>New</NavLink>
         <br/>
         <NavLink to='/moods'>All Moods</NavLink>
-        <br/>
+        <br/><br/>
         
         <Switch>
-          <Route exact path='/new' render={(routerProps) => <PromptInput {...routerProps} moods={this.props.moods} />} />
+          <Route path='/new' render={(routerProps) => <PromptInput {...routerProps} moods={this.props.moods} />} />
           {/* <PromptInput moods={this.props.moods} /> */}
-          
-          <Route exact path='/moods/:id' render={(routerProps) => <Mood {...routerProps} moods={this.props.moods} />} />
-          <Route exact path='/moods' render={(routerProps) => <MoodsContainer {...routerProps} moods={this.props.moods}/>} />
+          <Route path='/moods/:id' render={(routerProps) => <Mood {...routerProps} moods={this.props.moods} />} />
+          <Route path='/moods' render={(routerProps) => <MoodsContainer {...routerProps} moods={this.props.moods}/>} />
           {/* <MoodsContainer moods={this.props.moods} /> */}
         </Switch>
       </>

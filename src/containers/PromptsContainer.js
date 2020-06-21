@@ -4,9 +4,13 @@ import Prompts from '../components/Prompts.js';
 class PromptsContainer extends Component {
 
     render() {
+        // console.log(this.props.mood)
+
+        // debugger
         return (
             <div>
-                <Prompts prompts={this.props.prompts} />
+                PromptsContainer
+                <Prompts prompts={this.props.mood && this.props.mood.prompts} />
             </div>
         );
     }

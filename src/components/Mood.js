@@ -1,16 +1,18 @@
 import React from 'react';
-import {Redirect} from 'react-router-dom';
+import {Route} from 'react-router-dom';
 import PromptsContainer from '../containers/PromptsContainer';
 
 const Mood = props => {
-
-    let mood = props.moods[props.match.params.id - 1]
+// debugger
+    const mood = props.moods[parseInt(props.match.params.id) - 1]
+    
     console.log(mood)
-
     return (
         <>
             {/* {mood ? null : <Redirect to='/moods' />} */}
-            {mood ? mood.feeling : null}
+            <h2>{mood ? mood.feeling : null}</h2>
+            <PromptsContainer mood={mood} />
+
             {/* <PromptsContainer prompts={props.prompts} /> */}
         </>
     )
