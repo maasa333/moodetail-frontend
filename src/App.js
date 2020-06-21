@@ -15,8 +15,6 @@ class App extends Component {
     return (
       <>
         <NavLink to='/'>Home</NavLink>
-        {/* <br/>
-        <NavLink to='/'>New</NavLink> */}
         <br/>
         <NavLink to='/moods'>All Moods</NavLink>
         <br/><br/>
@@ -37,4 +35,3 @@ const mapStateToProps = state => {
 }
 
 export default connect(mapStateToProps, {fetchMoods})(App)
-// export default App

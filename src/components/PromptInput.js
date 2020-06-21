@@ -5,12 +5,9 @@ import {addPrompt} from '../actions/addPrompt';
 class PromptInput extends Component {
 
     state = {
-        // mood_id: '',
-        // mood: '',
-        desc: ''
+        desc: '',
+        controllable: false
     }
-    
-    // renderMoodOptions = () => this.props.moods.map(mood => <option key={mood.id} value={mood.feeling}>{mood.feeling}</option>)
 
     handleOnChange = event => {
         this.setState({
@@ -18,12 +15,11 @@ class PromptInput extends Component {
         })
     }
 
-    // handleOnSelect = event => {
-    //     this.setState({
-    //         mood_id: event.target.options.selectedIndex,
-    //         mood: event.target.value
-    //     })
-    // }
+    handleChecked = () => {        
+        this.setState({
+            controllable: !this.state.controllable
+        })
+    }
 
     handleOnSubmit = event => {
         event.preventDefault()
@@ -35,19 +31,15 @@ class PromptInput extends Component {
     }
 
     render() {
-        // console.log(this.props)
-        // debugger
+        console.log(this.state)
         return (
             <div>
                 <form onSubmit={event => this.handleOnSubmit(event)}>
-                    {/* Select a mood:
-                    <select defaultValue={'DEFAULT'} onChange={event => this.handleOnSelect(event)} value={this.state.value}>
-                        <option value='DEFAULT' disabled>Select a mood</option>
-                        {this.renderMoodOptions}
-                    </select>
-                    <br/> */}
                     <label>Describe what prompted this mood:</label>
                     <input onChange={event => this.handleOnChange(event)} name='desc' type='text' value={this.state.desc} />
+                    <br/>
+                    <label>Controllable</label>
+                    <input onChange={this.handleChecked} type='checkbox' />
                     <br/>
                     <input type='submit' />
                 </form>

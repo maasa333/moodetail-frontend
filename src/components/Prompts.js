@@ -2,7 +2,6 @@ import React from 'react';
 import Prompt from '../components/Prompt'
 
 const Prompts = props => {
-    // debugger
     return (
         <div>
             <ul>

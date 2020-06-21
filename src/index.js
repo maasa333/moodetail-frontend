@@ -14,7 +14,6 @@ let store = createStore(moodReducer, composeEnhancers(applyMiddleware(thunk)))
 ReactDOM.render(
   <Provider store={store}>
     <Router>
-      {/* <Route path='/' component={App} /> */}
       <App />
     </Router>
   </Provider>,

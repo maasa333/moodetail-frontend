@@ -1,5 +1,4 @@
 export const addPrompt = (prompt, moodID) => {
-    // debugger
     return dispatch => {
         fetch(`http://localhost:3001/api/v1/moods/${moodID}/prompts`, {
             method: 'POST',

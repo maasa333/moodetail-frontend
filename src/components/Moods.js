@@ -1,6 +1,5 @@
 import React from 'react';
-import Mood from './Mood';
-import {Route, Link} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 const Moods = props => {
 
@@ -12,7 +11,6 @@ const Moods = props => {
                         <Link to={`/moods/${mood.id}`} >{mood.feeling}</Link>    
                     </li>
                 )}
-                {/* {props.moods.map(mood => <li key={mood.id}><Mood id={mood.id} feeling={mood.feeling} prompts={mood.prompts} /></li>)} */}
             </ul>
         </div>
     );

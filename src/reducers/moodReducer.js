@@ -12,16 +12,14 @@ export default function moodReducer(state = {moods: [], prompts:[]}, action) {
             })
             return {...state, moods: moods}
         case 'DELETE_PROMPT':
-            console.log('hit DELETE_PROMPT action')
-            // debugger
-            let moods2 = state.moods.map(mood => {
+            let remainingMoods = state.moods.map(mood => {
                 if (mood.id === action.payload.id) {
                     return action.payload
                 } else {
                     return mood
                 }
             })
-            return {...state, moods: moods2}
+            return {...state, moods: remainingMoods}
         default:
             return state
     }

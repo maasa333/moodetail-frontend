@@ -5,7 +5,6 @@ import {deletePrompt} from '../actions/deletePrompt';
 const Prompt = props => {
     
     const handleDelete = (props) => {
-        console.log(props)
         props.deletePrompt(props.id, props.moodID)
     }
 
