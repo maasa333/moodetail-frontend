@@ -1,15 +1,15 @@
-export const addPrompt = (data) => {
+export const addPrompt = (prompt, moodID) => {
     // debugger
     return dispatch => {
-        fetch(`http://localhost:3001/api/v1/moods/${data.mood_id}/prompts`, {
+        fetch(`http://localhost:3001/api/v1/moods/${moodID}/prompts`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json'
             },
-            body: JSON.stringify(data)
+            body: JSON.stringify(prompt)
         })
         .then(response => response.json())
-        .then(prompt => dispatch({ type: 'ADD_PROMPT', payload: prompt }))
+        .then(mood => dispatch({ type: 'ADD_PROMPT', payload: mood }))
     }
 }

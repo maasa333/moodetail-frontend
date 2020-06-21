@@ -16,17 +16,17 @@ class App extends Component {
     return (
       <>
         <NavLink to='/'>Home</NavLink>
-        <br/>
-        <NavLink to='/new'>New</NavLink>
+        {/* <br/>
+        <NavLink to='/'>New</NavLink> */}
         <br/>
         <NavLink to='/moods'>All Moods</NavLink>
         <br/><br/>
         
         <Switch>
-          <Route path='/new' render={(routerProps) => <PromptInput {...routerProps} moods={this.props.moods} />} />
           {/* <PromptInput moods={this.props.moods} /> */}
           <Route path='/moods/:id' render={(routerProps) => <Mood {...routerProps} moods={this.props.moods} />} />
           <Route path='/moods' render={(routerProps) => <MoodsContainer {...routerProps} moods={this.props.moods}/>} />
+          <Route path='/' render={(routerProps) => <PromptInput {...routerProps} moods={this.props.moods} />} />
           {/* <MoodsContainer moods={this.props.moods} /> */}
         </Switch>
       </>

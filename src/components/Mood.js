@@ -6,7 +6,7 @@ const Mood = props => {
 // debugger
     const mood = props.moods[parseInt(props.match.params.id) - 1]
     
-    console.log(mood)
+    // console.log(mood)
     return (
         <>
             {/* {mood ? null : <Redirect to='/moods' />} */}
