@@ -4,14 +4,14 @@ import {deletePrompt} from '../actions/deletePrompt';
 
 const Prompt = props => {
     
-    const handleDelete = () => {
+    const handleDelete = (props) => {
         console.log(props)
         props.deletePrompt(props.id, props.moodID)
     }
 
     return (
         <div>
-            {props.prompt}  <button onClick={handleDelete}>Delete</button>
+            {props.prompt}  <button onClick={() => handleDelete(props)}>Delete</button>
         </div>
     );
 }
