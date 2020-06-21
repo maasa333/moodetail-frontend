@@ -3,7 +3,6 @@ import { connect } from 'react-redux'
 import {Route, NavLink, Switch} from 'react-router-dom';
 import MoodsContainer from './containers/MoodsContainer';
 import Mood from './components/Mood';
-import PromptInput from './components/PromptInput';
 import {fetchMoods} from './actions/fetchMoods';
 
 class App extends Component {
@@ -23,11 +22,8 @@ class App extends Component {
         <br/><br/>
         
         <Switch>
-          {/* <PromptInput moods={this.props.moods} /> */}
           <Route path='/moods/:id' render={(routerProps) => <Mood {...routerProps} moods={this.props.moods} />} />
           <Route path='/moods' render={(routerProps) => <MoodsContainer {...routerProps} moods={this.props.moods}/>} />
-          <Route path='/' render={(routerProps) => <PromptInput {...routerProps} moods={this.props.moods} />} />
-          {/* <MoodsContainer moods={this.props.moods} /> */}
         </Switch>
       </>
     );
