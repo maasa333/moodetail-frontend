@@ -2,13 +2,13 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 // import {Route} from 'react-router-dom';
 import Moods from '../components/Moods';
-import {fetchMoods} from '../actions/fetchMoods';
+// import {fetchMoods} from '../actions/fetchMoods';
 
 class MoodsContainer extends Component {
 
-    componentDidMount() {
-        this.props.fetchMoods();
-    }
+    // componentDidMount() {
+    //     this.props.fetchMoods();
+    // }
 
     render() {
         return (
@@ -22,10 +22,11 @@ class MoodsContainer extends Component {
     }
 }
 
-const mapStateToProps = state => {
-    return {
-        moods: state.moods
-    }
-}
+// const mapStateToProps = state => {
+//     return {
+//         moods: state.moods
+//     }
+// }
 
-export default connect(mapStateToProps, { fetchMoods })(MoodsContainer);
+export default MoodsContainer;
+// export default connect(mapStateToProps, { fetchMoods })(MoodsContainer);
