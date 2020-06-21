@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import {deletePrompt} from '../actions/deletePrompt';
+import ActionsContainer from '../containers/ActionsContainer';
 
 const Prompt = props => {
     
@@ -8,9 +9,19 @@ const Prompt = props => {
         props.deletePrompt(props.id, props.moodID)
     }
 
+    const renderActionsContainer = () => {
+        if (props.controllable === true) {
+            return <ActionsContainer />
+        }
+    }
+    // console.log(props)
     return (
         <div>
-            {props.prompt}  <button onClick={() => handleDelete(props)}>Delete</button>
+            {props.prompt}
+            <br/>
+            <button onClick={() => handleDelete(props)}>Delete</button>
+            <br/>
+            {renderActionsContainer()}
         </div>
     );
 }
