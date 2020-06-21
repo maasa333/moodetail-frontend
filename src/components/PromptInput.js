@@ -54,11 +54,11 @@ class PromptInput extends Component {
     }
 }
 
-const mapStateToProps = state => {
-    return {
-        moods: state.moods
-        // prompts: state.prompts
-    }
-}
+// const mapStateToProps = state => {
+//     return {
+//         moods: state.moods
+//         // prompts: state.prompts
+//     }
+// }
 
-export default connect(mapStateToProps, {addPrompt})(PromptInput);
+export default connect(null, {addPrompt})(PromptInput);
