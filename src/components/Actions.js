@@ -1,15 +1,15 @@
-import React from 'react';
-import Action from '../components/Action'
+// import React from 'react';
+// import Action from '../components/Action'
 
-const Actions = props => {
-    console.log(props)
-    return (
-        <div>
-            <ul>
-                <Action />
-            </ul>
-        </div>
-    );
-}
+// const Actions = props => {
+//     console.log(props)
+//     return (
+//         <div>
+//             <ul>
+//                 <Action />
+//             </ul>
+//         </div>
+//     );
+// }
 
-export default Actions;
+// export default Actions;
