@@ -38,9 +38,9 @@ class PromptInput extends Component {
                     <label>Describe what prompted this mood:</label>
                     <input onChange={event => this.handleOnChange(event)} name='desc' type='text' value={this.state.desc} />
                     <br/>
-                    <label>Controllable</label>
+                    {/* <label>Controllable</label>
                     <input onChange={this.handleChecked} type='checkbox' />
-                    <br/>
+                    <br/> */}
                     <input type='submit' />
                 </form>
             </div>
