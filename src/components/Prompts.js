@@ -1,5 +1,5 @@
 import React from 'react';
-import {Card, Accordion} from 'react-bootstrap';
+import {Card} from 'react-bootstrap';
 import Prompt from '../components/Prompt';
 
 const Prompts = props => {
@@ -11,7 +11,6 @@ const Prompts = props => {
                     <li key={prompt.id}><Prompt prompt={prompt.desc} id={prompt.id} moodID={prompt.mood_id} controllable={prompt.controllable} /></li>
                 )}
             </ul> */}
-            {/* <Accordion defaultActiveKey> */}
                 {props.prompts && props.prompts.map(prompt => 
                     <Card key={prompt.id}>
                         <Card.Header>
@@ -19,7 +18,6 @@ const Prompts = props => {
                         </Card.Header>
                     </Card>
                 )}
-            {/* </Accordion> */}
         </div>
     );
 }

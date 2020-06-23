@@ -1,9 +1,10 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import {Accordion, Button, Card} from 'react-bootstrap';
+import {Accordion, Button, Card, Alert} from 'react-bootstrap';
 import { connect } from 'react-redux';
 import {deletePrompt} from '../actions/deletePrompt';
-// import ActionsContainer from '../containers/ActionsContainer';
+import ActionsContainer from '../containers/ActionsContainer';
+// import { render } from '@testing-library/react';
 
 const Prompt = props => {
     
@@ -20,14 +21,23 @@ const Prompt = props => {
     return (
         <div>
             <Accordion defaultActiveKey>
-                <Accordion.Toggle as={Button} variant='link' >
+                <Accordion.Toggle as={Button} variant='outline-primary' >
                     {props.prompt}
                 </Accordion.Toggle>
-                <Accordion.Collapse>
+                {/* <Button size='sm' variant='outline-danger' onClick={() => handleDelete(props)}>Delete</Button> */}
+                <ActionsContainer prompt={props} />
+                {/* <Accordion.Collapse>
                     <Card.Body>
+                        <Card.Text>
+                            Is this in your control?
+                            <br/>
+                            <Button size='sm'>Yes</Button>{'  '}
+                            <Button size='sm'>No</Button>
+                        </Card.Text>
+                        <br/>
                         <Button size='sm' variant='outline-danger' onClick={() => handleDelete(props)}>Delete</Button>
                     </Card.Body>
-                </Accordion.Collapse>
+                </Accordion.Collapse> */}
             </Accordion>
             {/* <br/>
             {renderActionsContainer()} */}
