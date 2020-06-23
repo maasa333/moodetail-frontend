@@ -19,14 +19,16 @@ const Prompt = props => {
 
     return (
         <div>
-            <Accordion.Toggle as={Button} variant='link' >
-                {props.prompt}
-            </Accordion.Toggle>
-            <Accordion.Collapse>
-                <Card.Body>
-                    <Button size='sm' variant='outline-danger' onClick={() => handleDelete(props)}>Delete</Button>
-                </Card.Body>
-            </Accordion.Collapse>
+            <Accordion defaultActiveKey>
+                <Accordion.Toggle as={Button} variant='link' >
+                    {props.prompt}
+                </Accordion.Toggle>
+                <Accordion.Collapse>
+                    <Card.Body>
+                        <Button size='sm' variant='outline-danger' onClick={() => handleDelete(props)}>Delete</Button>
+                    </Card.Body>
+                </Accordion.Collapse>
+            </Accordion>
             {/* <br/>
             {renderActionsContainer()} */}
         </div>
