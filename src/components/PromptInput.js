@@ -6,8 +6,8 @@ import {addPrompt} from '../actions/addPrompt';
 class PromptInput extends Component {
 
     state = {
-        desc: ''
-        // controllable: false
+        desc: '',
+        controllable: false
     }
 
     handleOnChange = event => {
@@ -16,7 +16,7 @@ class PromptInput extends Component {
         })
     }
 
-    handleChecked = () => {        
+    handleYes = () => {        
         this.setState({
             controllable: !this.state.controllable
         })
@@ -24,9 +24,9 @@ class PromptInput extends Component {
 
     handleOnSubmit = event => {
         event.preventDefault()
+        debugger
         this.props.addPrompt(this.state, this.props.mood.id)
         this.setState({
-            // mood: '',
             desc: ''
         })
     }
@@ -39,7 +39,7 @@ class PromptInput extends Component {
                     <Form.Label>Describe what prompted this mood:</Form.Label>
                     <Form.Control onChange={event => this.handleOnChange(event)} name='desc' type='text' value={this.state.desc}></Form.Control>
                     <Form.Label>Is this within my control?</Form.Label>
-                    <Form.Check label='Yes' type='radio' name='controllable' />
+                    <Form.Check label='Yes' type='radio' name='controllable' onChange={this.handleYes} />
                     <Form.Check label='No' type='radio' name='controllable' />
                     {/* <Form.Control onChange={this.handleChecked} type='checkbox'></Form.Control> */}
                     <br/>
