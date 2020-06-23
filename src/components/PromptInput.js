@@ -6,8 +6,8 @@ import {addPrompt} from '../actions/addPrompt';
 class PromptInput extends Component {
 
     state = {
-        desc: '',
-        controllable: false
+        desc: ''
+        // controllable: false
     }
 
     handleOnChange = event => {
@@ -16,17 +16,17 @@ class PromptInput extends Component {
         })
     }
 
-    handleChecked = () => {        
-        this.setState({
-            controllable: !this.state.controllable
-        })
-    }
+    // handleChecked = () => {        
+    //     this.setState({
+    //         controllable: !this.state.controllable
+    //     })
+    // }
 
     handleOnSubmit = event => {
         event.preventDefault()
         this.props.addPrompt(this.state, this.props.mood.id)
         this.setState({
-            mood: '',
+            // mood: '',
             desc: ''
         })
     }

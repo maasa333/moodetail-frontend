@@ -1,15 +1,15 @@
 import React from 'react';
-// import Button from 'react-bootstrap/Button';
-// import { connect } from 'react-redux';
-// import {deletePrompt} from '../actions/deletePrompt';
-import ButtonsContainer from '../containers/ButtonsContainer';
+import {Link} from 'react-router-dom';
+import {Accordion, Button, Card} from 'react-bootstrap';
+import { connect } from 'react-redux';
+import {deletePrompt} from '../actions/deletePrompt';
 // import ActionsContainer from '../containers/ActionsContainer';
 
 const Prompt = props => {
     
-    // const handleDelete = (props) => {
-    //     props.deletePrompt(props.id, props.moodID)
-    // }
+    const handleDelete = (props) => {
+        props.deletePrompt(props.id, props.moodID)
+    }
 
     // const renderActionsContainer = () => {
     //     if (props && (props.controllable === true)) {
@@ -19,14 +19,18 @@ const Prompt = props => {
 
     return (
         <div>
-            {props.prompt}
-            <ButtonsContainer />
-            {/* <Button onClick={() => handleDelete(props)} size='sm' variant='outline-danger' >Delete</Button> */}
+            <Accordion.Toggle as={Button} variant='link' >
+                {props.prompt}
+            </Accordion.Toggle>
+            <Accordion.Collapse>
+                <Card.Body>
+                    <Button size='sm' variant='outline-danger' onClick={() => handleDelete(props)}>Delete</Button>
+                </Card.Body>
+            </Accordion.Collapse>
             {/* <br/>
             {renderActionsContainer()} */}
         </div>
     );
 }
 
-export default Prompt;
-// export default connect(null, {deletePrompt})(Prompt);
+export default connect(null, {deletePrompt})(Prompt);

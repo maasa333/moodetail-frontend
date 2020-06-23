@@ -1,15 +1,25 @@
 import React from 'react';
-import Prompt from '../components/Prompt'
+import {Card, Accordion} from 'react-bootstrap';
+import Prompt from '../components/Prompt';
 
 const Prompts = props => {
 
     return (
         <div>
-            <ul>
+            {/* <ul>
                 {props.prompts && props.prompts.map(prompt => 
                     <li key={prompt.id}><Prompt prompt={prompt.desc} id={prompt.id} moodID={prompt.mood_id} controllable={prompt.controllable} /></li>
                 )}
-            </ul>
+            </ul> */}
+            <Accordion defaultActiveKey>
+                {props.prompts && props.prompts.map(prompt => 
+                    <Card key={prompt.id}>
+                        <Card.Header>
+                            <Prompt prompt={prompt.desc} id={prompt.id} moodID={prompt.mood_id} />
+                        </Card.Header>
+                    </Card>
+                )}
+            </Accordion>
         </div>
     );
 }
