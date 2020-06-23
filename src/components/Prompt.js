@@ -1,13 +1,15 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import {deletePrompt} from '../actions/deletePrompt';
+// import Button from 'react-bootstrap/Button';
+// import { connect } from 'react-redux';
+// import {deletePrompt} from '../actions/deletePrompt';
+import ButtonsContainer from '../containers/ButtonsContainer';
 // import ActionsContainer from '../containers/ActionsContainer';
 
 const Prompt = props => {
     
-    const handleDelete = (props) => {
-        props.deletePrompt(props.id, props.moodID)
-    }
+    // const handleDelete = (props) => {
+    //     props.deletePrompt(props.id, props.moodID)
+    // }
 
     // const renderActionsContainer = () => {
     //     if (props && (props.controllable === true)) {
@@ -17,11 +19,14 @@ const Prompt = props => {
 
     return (
         <div>
-            {props.prompt}  <button onClick={() => handleDelete(props)}>Delete</button>
+            {props.prompt}
+            <ButtonsContainer />
+            {/* <Button onClick={() => handleDelete(props)} size='sm' variant='outline-danger' >Delete</Button> */}
             {/* <br/>
             {renderActionsContainer()} */}
         </div>
     );
 }
 
-export default connect(null, {deletePrompt})(Prompt);
+export default Prompt;
+// export default connect(null, {deletePrompt})(Prompt);

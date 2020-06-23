@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Form from 'react-bootstrap/Form';
+import {Form, Button} from 'react-bootstrap';
 import { connect } from 'react-redux';
 import {addPrompt} from '../actions/addPrompt';
 
@@ -35,18 +35,14 @@ class PromptInput extends Component {
         // console.log(this.state)
         return (
             <div>
-                <Form>
-                    <Form.Label>Email Address</Form.Label>
-                </Form>
-                <form onSubmit={event => this.handleOnSubmit(event)}>
-                    <label>Describe what prompted this mood:</label>
-                    <input onChange={event => this.handleOnChange(event)} name='desc' type='text' value={this.state.desc} />
-                    <br/>
+                <Form onSubmit={event => this.handleOnSubmit(event)}>
+                    <Form.Label>Describe what prompted this mood:</Form.Label>
+                    <Form.Control onChange={event => this.handleOnChange(event)} name='desc' type='text' value={this.state.desc}></Form.Control>
                     {/* <label>Controllable</label>
-                    <input onChange={this.handleChecked} type='checkbox' />
+                    <Form.Control onChange={this.handleChecked} type='checkbox'></Form.Control>
                     <br/> */}
-                    <input type='submit' />
-                </form>
+                    <Button type='submit' size='sm'>Submit</Button>
+                </Form>
             </div>
         );
     }

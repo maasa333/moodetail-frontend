@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import {Route, NavLink, Switch} from 'react-router-dom';
+
+import Home from './components/Home';
 import MoodsContainer from './containers/MoodsContainer';
 import Mood from './components/Mood';
-import Home from './components/Home';
 import {fetchMoods} from './actions/fetchMoods';
 
 class App extends Component {
