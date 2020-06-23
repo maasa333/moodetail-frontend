@@ -8,10 +8,6 @@ import {deletePrompt} from '../actions/deletePrompt';
 
 class ActionsContainer extends Component {
 
-    // handleYesClick = () => {
-    //     console.log('YES!')
-    // }
-
     handleDelete = (props) => {
         props.deletePrompt(this.props.prompt.id, this.props.prompt.moodID)
     }
@@ -24,11 +20,6 @@ class ActionsContainer extends Component {
                     <Card.Body>
                         <Card.Text>
                             <Button size='sm' variant='outline-danger' onClick={() => this.handleDelete(this.props)}>Delete</Button>
-                            
-                            {/* Is this in your control?
-                            <br/>
-                            <Button onClick={this.handleYesClick} size='sm'>Yes</Button>{'  '}
-                            <Button size='sm'>No</Button>{'   '} */}
                         </Card.Text>
                     </Card.Body>
                 </Accordion.Collapse>

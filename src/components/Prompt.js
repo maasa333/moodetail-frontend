@@ -1,16 +1,16 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import {Accordion, Button, Card, Alert} from 'react-bootstrap';
-import { connect } from 'react-redux';
-import {deletePrompt} from '../actions/deletePrompt';
+// import { connect } from 'react-redux';
+// import {deletePrompt} from '../actions/deletePrompt';
 import ActionsContainer from '../containers/ActionsContainer';
 // import { render } from '@testing-library/react';
 
 const Prompt = props => {
     
-    const handleDelete = (props) => {
-        props.deletePrompt(props.id, props.moodID)
-    }
+    // const handleDelete = (props) => {
+    //     props.deletePrompt(props.id, props.moodID)
+    // }
 
     // const renderActionsContainer = () => {
     //     if (props && (props.controllable === true)) {
@@ -21,7 +21,7 @@ const Prompt = props => {
     return (
         <div>
             <Accordion defaultActiveKey>
-                <Accordion.Toggle as={Button} variant='outline-primary' >
+                <Accordion.Toggle as={Button} variant='info' >
                     {props.prompt}
                 </Accordion.Toggle>
                 {/* <Button size='sm' variant='outline-danger' onClick={() => handleDelete(props)}>Delete</Button> */}
@@ -45,4 +45,5 @@ const Prompt = props => {
     );
 }
 
-export default connect(null, {deletePrompt})(Prompt);
+export default Prompt;
+// export default connect(null)(Prompt);

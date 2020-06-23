@@ -16,11 +16,11 @@ class PromptInput extends Component {
         })
     }
 
-    // handleChecked = () => {        
-    //     this.setState({
-    //         controllable: !this.state.controllable
-    //     })
-    // }
+    handleChecked = () => {        
+        this.setState({
+            controllable: !this.state.controllable
+        })
+    }
 
     handleOnSubmit = event => {
         event.preventDefault()
@@ -38,11 +38,14 @@ class PromptInput extends Component {
                 <Form onSubmit={event => this.handleOnSubmit(event)}>
                     <Form.Label>Describe what prompted this mood:</Form.Label>
                     <Form.Control onChange={event => this.handleOnChange(event)} name='desc' type='text' value={this.state.desc}></Form.Control>
-                    {/* <label>Controllable</label>
-                    <Form.Control onChange={this.handleChecked} type='checkbox'></Form.Control>
-                    <br/> */}
+                    <Form.Label>Is this within my control?</Form.Label>
+                    <Form.Check label='Yes' type='radio' name='controllable' />
+                    <Form.Check label='No' type='radio' name='controllable' />
+                    {/* <Form.Control onChange={this.handleChecked} type='checkbox'></Form.Control> */}
+                    <br/>
                     <Button type='submit' size='sm'>Submit</Button>
                 </Form>
+                <br/>
             </div>
         );
     }
