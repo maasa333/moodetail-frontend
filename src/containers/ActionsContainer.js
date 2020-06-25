@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Popover, OverlayTrigger, Accordion, Button, Card} from 'react-bootstrap';
+import {Accordion, Button, Card} from 'react-bootstrap';
 import { connect } from 'react-redux';
 import {deletePrompt} from '../actions/deletePrompt';
 
@@ -8,6 +8,11 @@ import {deletePrompt} from '../actions/deletePrompt';
 
 class ActionsContainer extends Component {
 
+    handleEdit = (props) => {
+        console.log('clicked edit')
+        // props.deletePrompt(this.props.prompt.id, this.props.prompt.moodID)
+    }
+    
     handleDelete = (props) => {
         props.deletePrompt(this.props.prompt.id, this.props.prompt.moodID)
     }
@@ -19,6 +24,7 @@ class ActionsContainer extends Component {
                 <Accordion.Collapse>
                     <Card.Body>
                         <Card.Text>
+                            <Button size='sm' variant='outline-secondary' onClick={() => this.handleEdit(this.props)}>Edit</Button>{'  '}
                             <Button size='sm' variant='outline-danger' onClick={() => this.handleDelete(this.props)}>Delete</Button>
                         </Card.Text>
                     </Card.Body>
