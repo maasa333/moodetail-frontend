@@ -2,10 +2,12 @@ import React from 'react';
 import Prompts from '../components/Prompts';
 
 const UncontrollablePrompts = props => {
+
+    const prompts = props.prompts && props.prompts.map(prompt => prompt)
+
     return (
-        <div>
-            <h4>Uncontrollable Prompts Container</h4>
-            <Prompts mood={props.mood} />
+        <div>           
+            <Prompts prompts={prompts} />
         </div>
     )
 }

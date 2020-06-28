@@ -2,13 +2,13 @@ import React from 'react';
 import Prompts from '../components/Prompts';
 
 const ControllablePrompts = props => {
+    
+    // const prompts = props.prompts ? props.prompts.map(prompt => prompt) : null
+    const prompts = props.prompts && props.prompts.map(prompts => prompts)
 
-    const mood = props.mood && props.mood.prompts.filter(prompt => prompt.controllable === true)
-    console.log(mood)
     return (
         <div>
-            <h4>Controllable Prompts Container</h4>
-            <Prompts mood={props.mood} />
+            <Prompts prompts={prompts} />
         </div>
     )
 }

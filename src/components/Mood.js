@@ -5,12 +5,14 @@ import PromptsContainer from '../containers/PromptsContainer';
 const Mood = props => {
     
     const mood = props.moods[parseInt(props.match.params.id) - 1]
-    // const path = props.match.url.concat('/prompts')
-    // console.log(path)
+
+    const prompts = mood ? mood.prompts : null
+
     return (
         <>
             <h3>{mood ? mood.feeling : null}</h3>
-            <PromptsContainer mood={mood} />
+            <PromptsContainer mood={mood} prompts={prompts} />
+            
             {/* <Switch>
                 <Route path={path} render={(routerProps) => <PromptsContainer {...routerProps} mood={mood} />} />
             </Switch> */}
