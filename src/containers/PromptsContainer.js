@@ -1,5 +1,5 @@
 import React from 'react';
-import {CardColumns} from 'react-bootstrap';
+import {Container, Row, Col} from 'react-bootstrap';
 // import {Route} from 'react-router-dom';
 import PromptInput from '../components/PromptInput';
 import ControllablePrompts from '../containers/ControllablePrompts';
@@ -14,10 +14,12 @@ const PromptsContainer = props => {
     return (
         <div>
             <PromptInput mood={props.mood} />
-            <CardColumns>
-                <ControllablePrompts prompts={controllablePrompts} />
-                <UncontrollablePrompts prompts={uncontrollablePrompts} />
-            </CardColumns>
+            <Container>
+                <Row>
+                    <Col><ControllablePrompts prompts={controllablePrompts} /></Col>
+                    <Col><UncontrollablePrompts prompts={uncontrollablePrompts} /></Col>
+                </Row>
+            </Container>
         </div>
     )
 }
