@@ -11,6 +11,7 @@ const Prompt = props => {
                 <Accordion.Toggle as={Button} variant='info' >
                     {props.prompt}
                 </Accordion.Toggle>
+
                 <ActionsContainer prompt={props} />
             </Accordion>
         </div>

@@ -8,9 +8,9 @@ const ControllablePrompts = props => {
         <div>
             <Card>
                 <Card.Body>
-                    <Card.Title>Within my control</Card.Title>
+                    <Card.Title as='h4'>Within my control</Card.Title>
                     {props.prompts && props.prompts.map(prompt => 
-                        <Card.Text key={prompt.id}>
+                        <Card.Text key={prompt.id} as='span'>
                             <Prompt prompt={prompt.desc} id={prompt.id} moodID={prompt.mood_id} />
                         </Card.Text>
                     )}

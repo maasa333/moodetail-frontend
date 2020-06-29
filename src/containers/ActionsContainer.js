@@ -14,9 +14,7 @@ class ActionsContainer extends Component {
             <div>
                 <Accordion.Collapse>
                     <Card.Body>
-                        <Card.Text>
-                            <Button size='sm' variant='outline-danger' onClick={() => this.handleDelete(this.props)}>Delete</Button>
-                        </Card.Text>
+                        <Button size='sm' variant='outline-danger' onClick={() => this.handleDelete(this.props)}>Delete</Button>
                     </Card.Body>
                 </Accordion.Collapse>
             </div>
