@@ -1,14 +1,21 @@
 import React from 'react';
-import Prompts from '../components/Prompts';
+import {Card} from 'react-bootstrap';
+import Prompt from '../components/Prompt';
 
 const ControllablePrompts = props => {
-    
-    // const prompts = props.prompts ? props.prompts.map(prompt => prompt) : null
-    const prompts = props.prompts && props.prompts.map(prompts => prompts)
 
     return (
         <div>
-            <Prompts prompts={prompts} />
+            <Card>
+                <Card.Body>
+                    <Card.Title>Within my control</Card.Title>
+                    {props.prompts && props.prompts.map(prompt => 
+                        <Card.Text key={prompt.id}>
+                            <Prompt prompt={prompt.desc} id={prompt.id} moodID={prompt.mood_id} />
+                        </Card.Text>
+                    )}
+                </Card.Body>
+            </Card>
         </div>
     )
 }

@@ -1,6 +1,5 @@
-import React, { Component } from 'react';
-import {Route} from 'react-router-dom';
-import Prompts from '../components/Prompts';
+import React from 'react';
+// import {Route} from 'react-router-dom';
 import PromptInput from '../components/PromptInput';
 import ControllablePrompts from '../containers/ControllablePrompts';
 import UncontrollablePrompts from '../containers/UncontrollablePrompts';
@@ -21,24 +20,3 @@ const PromptsContainer = props => {
 }
 
 export default PromptsContainer;
-
-// class PromptsContainer extends Component {
-
-//     render() {
-//         console.log(this.props)
-//         return (
-//             <div>
-//                 <PromptInput mood={this.props.mood} />
-                
-//                 <ControllablePrompts />
-//                 <UncontrollablePrompts />
-
-//                 <Prompts prompts={this.props.mood && this.props.mood.prompts} />
-                
-//                 <Route path={this.path} render={(routerProps) => <Prompts {...routerProps} mood={this.props.mood} />} />
-//             </div>
-//         );
-//     }
-// }
-
-// export default PromptsContainer;
