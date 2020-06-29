@@ -3,15 +3,17 @@ import {Card} from 'react-bootstrap';
 import Prompt from '../components/Prompt';
 
 const ControllablePrompts = props => {
+    console.log(props)
 
     return (
         <div>
             <Card>
+                <Card.Header as='h5'>Within my control</Card.Header>
                 <Card.Body>
-                    <Card.Title as='h4'>Within my control</Card.Title>
                     {props.prompts && props.prompts.map(prompt => 
                         <Card.Text key={prompt.id} as='span'>
-                            <Prompt prompt={prompt.desc} id={prompt.id} moodID={prompt.mood_id} />
+                            <Prompt prompt={prompt} />
+                            {/* <Prompt prompt={prompt.desc} id={prompt.id} moodID={prompt.mood_id} /> */}
                             <br/>
                         </Card.Text>
                     )}

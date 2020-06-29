@@ -35,9 +35,9 @@ class PromptInput extends Component {
         return (
             <div>
                 <Form onSubmit={event => this.handleOnSubmit(event)}>
-                    <Form.Label>Describe what prompted this mood:</Form.Label>
+                    <Form.Label as='h5'>Describe what prompted this mood:</Form.Label>
                     <Form.Control onChange={event => this.handleOnChange(event)} name='desc' type='text' value={this.state.desc}></Form.Control>
-                    <Form.Label>Is this within my control?</Form.Label>
+                    <Form.Label as='h5'>Is this within my control?</Form.Label>
                     <Form.Check label='Yes' type='radio' name='controllable' onChange={this.handleYes} />
                     <Form.Check label='No' type='radio' name='controllable' />
                     {/* <Form.Control onChange={this.handleChecked} type='checkbox'></Form.Control> */}

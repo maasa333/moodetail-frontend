@@ -8,11 +8,11 @@ const Prompt = props => {
     return (
         <div>
             <Accordion defaultActiveKey>
-                <Accordion.Toggle as={Button} variant='info' >
-                    {props.prompt}
+                <Accordion.Toggle as={Button} variant='info' className='text-left'>
+                    {props.prompt.desc}
                 </Accordion.Toggle>
 
-                <ActionsContainer prompt={props} />
+                <ActionsContainer prompt={props.prompt} />
             </Accordion>
         </div>
     );
