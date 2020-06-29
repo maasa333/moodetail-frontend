@@ -19,7 +19,7 @@ let store = createStore(moodReducer, composeEnhancers(applyMiddleware(thunk)))
 ReactDOM.render(
   <Provider store={store}>
     <Router>
-      <Container>
+      <Container fluid>
         {/* <AlertProvider template={AlertTemplate} {...options}> */}
           <App />
         {/* </AlertProvider> */}

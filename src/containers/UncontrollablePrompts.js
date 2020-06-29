@@ -12,6 +12,7 @@ const UncontrollablePrompts = props => {
                     {props.prompts && props.prompts.map(prompt => 
                         <Card.Text key={prompt.id} as='span'>
                             <Prompt prompt={prompt.desc} id={prompt.id} moodID={prompt.mood_id} />
+                            <br/>
                         </Card.Text>
                     )}
                 </Card.Body>
