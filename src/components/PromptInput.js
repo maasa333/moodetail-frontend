@@ -31,7 +31,6 @@ class PromptInput extends Component {
     }
 
     render() {
-        // console.log(this.state)
         return (
             <div>
                 <Form onSubmit={event => this.handleOnSubmit(event)}>

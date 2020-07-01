@@ -10,7 +10,7 @@ const PromptsContainer = props => {
     const controllablePrompts = props.prompts && props.prompts.filter(prompt => prompt.controllable === true)
     
     const uncontrollablePrompts = props.prompts && props.prompts.filter(prompt => prompt.controllable === false)
-    // console.log(controllablePrompts)
+    
     return (
         <div>
             <PromptInput mood={props.mood} />
