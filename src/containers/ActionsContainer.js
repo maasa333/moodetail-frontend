@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import {Accordion, Button, Card} from 'react-bootstrap';
 import { connect } from 'react-redux';
+
+import {editPrompt} from '../actions/editPrompt';
 import {deletePrompt} from '../actions/deletePrompt';
 
 class ActionsContainer extends Component {
@@ -10,7 +12,7 @@ class ActionsContainer extends Component {
     }
 
     handleDelete = (props) => {
-        props.deletePrompt(this.props.prompt.id, this.props.prompt.moodID)
+        props.deletePrompt(this.props.prompt.id, this.props.prompt.mood_id)
     }
 
     render() {
@@ -29,7 +31,7 @@ class ActionsContainer extends Component {
     }
 }
 
-export default connect(null, {deletePrompt})(ActionsContainer);
+export default connect(null, {editPrompt, deletePrompt})(ActionsContainer);
 
 
 // handleActionButton = () => {
