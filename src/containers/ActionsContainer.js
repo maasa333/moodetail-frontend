@@ -2,17 +2,12 @@ import React, { Component } from 'react';
 import {Accordion, Button, Card} from 'react-bootstrap';
 import { connect } from 'react-redux';
 
-import {editPrompt} from '../actions/editPrompt';
 import {deletePrompt} from '../actions/deletePrompt';
 
 class ActionsContainer extends Component {
 
-    handleEdit = (props) => {
-        console.log('clicked Edit')
-    }
-
     handleDelete = (props) => {
-        props.deletePrompt(this.props.prompt.id, this.props.prompt.mood_id)
+        props.deletePrompt(props.prompt.id, props.prompt.mood_id)
     }
 
     render() {
@@ -21,8 +16,6 @@ class ActionsContainer extends Component {
             <div>
                 <Accordion.Collapse>
                     <Card.Body>
-                        <Button size='sm' variant='outline-warning' onClick={() => this.handleEdit(this.props)}>Edit</Button>
-                        {'  '}
                         <Button size='sm' variant='outline-danger' onClick={() => this.handleDelete(this.props)}>Delete</Button>
                     </Card.Body>
                 </Accordion.Collapse>
@@ -31,7 +24,7 @@ class ActionsContainer extends Component {
     }
 }
 
-export default connect(null, {editPrompt, deletePrompt})(ActionsContainer);
+export default connect(null, {deletePrompt})(ActionsContainer);
 
 
 // handleActionButton = () => {

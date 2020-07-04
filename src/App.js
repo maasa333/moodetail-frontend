@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import {Route, NavLink, Switch} from 'react-router-dom';
+import {Navbar, Nav} from 'react-bootstrap';
 
 import Home from './components/Home';
 import MoodsContainer from './containers/MoodsContainer';
@@ -16,10 +17,14 @@ class App extends Component {
   render() {
     return (
       <>
-        <NavLink to='/'>Home</NavLink>
+        <Navbar bg='light' variant='light'>
+          <Nav.Link href='/' >Home</Nav.Link>
+          <Nav.Link href='/moods' >All Moods</Nav.Link>
+        </Navbar>
+        {/* <NavLink to='/'>Home</NavLink>
         <br/>
         <NavLink to='/moods'>All Moods</NavLink>
-        <br/><br/>
+        <br/><br/> */}
         
         <Switch>
           <Route path='/moods/:id' render={(routerProps) => <Mood {...routerProps} moods={this.props.moods} />} />

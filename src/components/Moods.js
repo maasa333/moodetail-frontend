@@ -2,16 +2,6 @@ import React from 'react';
 import {Container, Card, CardColumns} from 'react-bootstrap';
 import {Link} from 'react-router-dom';
 
-import Happy from '../images/Happy.png';
-import Anxious from '../images/Anxious.png';
-import Angry from '../images/Angry.png';
-import Humorous from '../images/Humorous.png';
-import Calm from '../images/Calm.png';
-import Fearful from '../images/Fearful.png';
-import Hopeful from '../images/Hopeful.png';
-import Sad from '../images/Sad.png';
-import Grateful from '../images/Grateful.png';
-
 const Moods = props => {
 
     return (
