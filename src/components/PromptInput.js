@@ -31,9 +31,15 @@ class PromptInput extends Component {
     handleOnSubmit = event => {
         event.preventDefault()
         this.props.addPrompt(this.state, this.props.mood.id)
-        this.setState({
-            desc: ''
-        })
+        if (this.state.desc === "") {
+            alert('Please describe what prompted this mood')
+        } else if (this.state.controllable === '') {
+            alert ('Is this within your control?  Select "Yes" or "No"')
+        } else {
+            this.setState({
+                desc: ''
+            })
+        }
     }
 
     render() {
