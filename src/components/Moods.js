@@ -13,6 +13,7 @@ const Moods = props => {
                         <Card.Img variant='top' src={require(`../images/${mood.feeling}.png`)} />
                         <Card.Body className='text-center' >
                             <Card.Link href={`/moods/${mood.id}`} ><h5>{mood.feeling}</h5></Card.Link>    
+                            {/* <Card.Link href={`/moods/${mood.id}`} ><h5>{mood.feeling}</h5></Card.Link>     */}
                         </Card.Body>
                     </Card>
                 )}

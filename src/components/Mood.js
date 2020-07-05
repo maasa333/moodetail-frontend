@@ -1,5 +1,7 @@
 import React from 'react';
+import {Redirect} from 'react-router-dom';
 // import {Switch, Route} from 'react-router-dom';
+
 import PromptsContainer from '../containers/PromptsContainer';
 
 const Mood = props => {
@@ -10,7 +12,10 @@ const Mood = props => {
 
     return (
         <>
+            <br/>
+            {/* {mood ? null : <Redirect to='/moods' />} */}
             <h3>{mood ? mood.feeling : null}</h3>
+            <br/>
             <PromptsContainer mood={mood} prompts={prompts} />
             
             {/* <Switch>

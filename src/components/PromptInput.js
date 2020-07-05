@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import {addPrompt} from '../actions/addPrompt';
 
 class PromptInput extends Component {
-
+    
     state = {
         desc: '',
         controllable: ''
@@ -30,16 +30,16 @@ class PromptInput extends Component {
 
     handleOnSubmit = event => {
         event.preventDefault()
-        this.props.addPrompt(this.state, this.props.mood.id)
         if (this.state.desc === "") {
             alert('Please describe what prompted this mood')
         } else if (this.state.controllable === '') {
             alert ('Is this within your control?  Select "Yes" or "No"')
         } else {
-            this.setState({
-                desc: ''
-            })
+            this.props.addPrompt(this.state, this.props.mood.id)
         }
+        this.setState({
+            desc: ''
+        })
     }
 
     render() {
@@ -49,11 +49,12 @@ class PromptInput extends Component {
                 <Form onSubmit={event => this.handleOnSubmit(event)}>
                     <Form.Label as='h5'>Describe what prompted this mood:</Form.Label>
                     <Form.Control onChange={event => this.handleOnChange(event)} name='desc' type='text' value={this.state.desc}></Form.Control>
+                    <br/>
                     <Form.Label as='h5'>Is this within my control?</Form.Label>
                     <Form.Check label='Yes' type='radio' name='controllable' onChange={this.handleYes} />
                     <Form.Check label='No' type='radio' name='controllable' onChange={this.handleNo} />
                     <br/>
-                    <Button type='submit' size='sm'>Submit</Button>
+                    <Button type='submit'>Submit</Button>
                 </Form>
                 <br/>
             </div>
