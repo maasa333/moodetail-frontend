@@ -11,7 +11,6 @@ class ActionsContainer extends Component {
     }
 
     render() {
-        // console.log(this.props)
         return (
             <div>
                 <Accordion.Collapse>
@@ -25,24 +24,3 @@ class ActionsContainer extends Component {
 }
 
 export default connect(null, {deletePrompt})(ActionsContainer);
-
-
-// handleActionButton = () => {
-    //     console.log('Take action!')
-    // }
-    
-// handleWhatCanIDoButton = () => {
-    //     console.log('Display some message about letting go')
-    // }
-
-// {this.props.prompt.controllable === true ? 
-//     <Button size='sm' variant='outline-success' onClick={() => this.handleActionButton()} >Take action!</Button>
-//     <OverlayTrigger trigger='click' placement='right' overlay={ActionNotes}>
-//         <Button size='sm' variant='outline-success' >Take action!</Button> 
-//     </OverlayTrigger>
-// : null }
-// {this.props.prompt.controllable === true ? <Button size='sm' variant='outline-success' onClick={() => this.handleActionButton()} >Takaction!</Button> : null }
-
-// {this.props.prompt.controllable === false ? <Button size='sm' variant='outline-warning' onClick={() => this.handleWhatCanIDoButton()} >What can I do?</Button> : null }
-                        
-// {'   '}

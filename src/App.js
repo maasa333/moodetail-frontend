@@ -24,7 +24,6 @@ class App extends Component {
         
         <Switch>
           <Route path='/moods/:feeling' render={(routerProps) => <Mood {...routerProps} moods={this.props.moods} />} />
-          {/* <Route path='/moods/:id' render={(routerProps) => <Mood {...routerProps} moods={this.props.moods} />} /> */}
           <Route path='/moods' render={(routerProps) => <MoodsContainer {...routerProps} moods={this.props.moods}/>} />
           <Route path='/' component={About} />
         </Switch>

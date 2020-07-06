@@ -1,9 +1,9 @@
 import React from 'react';
 import {Container, Row, Col} from 'react-bootstrap';
-// import {Route} from 'react-router-dom';
+
 import PromptInput from '../components/PromptInput';
-import ControllablePrompts from '../containers/ControllablePrompts';
-import UncontrollablePrompts from '../containers/UncontrollablePrompts';
+import ControllablePrompts from '../components/ControllablePrompts';
+import UncontrollablePrompts from '../components/UncontrollablePrompts';
 
 const PromptsContainer = props => {
 

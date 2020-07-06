@@ -1,5 +1,4 @@
 import React from 'react';
-// import {Link} from 'react-router-dom';
 import {Accordion, Button} from 'react-bootstrap';
 import ActionsContainer from '../containers/ActionsContainer';
 

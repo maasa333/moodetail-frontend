@@ -1,18 +1,17 @@
 import React from 'react';
 import {Card} from 'react-bootstrap';
-import Prompt from '../components/Prompt';
+import Prompt from './Prompt';
 
-const ControllablePrompts = props => {
+const UncontrollablePrompts = props => {
 
     return (
-        <div>
+        <div> 
             <Card>
-                <Card.Header as='h5'>Within my control</Card.Header>
+                <Card.Header as='h5'>Out of my control</Card.Header>
                 <Card.Body>
                     {props.prompts && props.prompts.map(prompt => 
                         <Card.Text key={prompt.id} as='span'>
                             <Prompt prompt={prompt} />
-                            {/* <Prompt prompt={prompt.desc} id={prompt.id} moodID={prompt.mood_id} /> */}
                             <br/>
                         </Card.Text>
                     )}
@@ -22,4 +21,4 @@ const ControllablePrompts = props => {
     )
 }
 
-export default ControllablePrompts;
+export default UncontrollablePrompts;
