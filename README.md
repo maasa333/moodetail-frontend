@@ -1,6 +1,6 @@
 # MOODetail (frontend)
 
-<!-- MOODetail is a Single Page Application using React/Redux on the frontend and a Rails API backend.  This repository is for the React/Redux frontend (the backend can be found at https://github.com/maasa333/moodetail-backend).  This app is for keeping track of what prompts certain moods, and to distinguish between those that are within your control and those that are out of your control.  -->
+MOODetail is a Single Page Application using React/Redux on the frontend and a Rails API backend.  This repository is for the React/Redux frontend (the backend can be found at https://github.com/maasa333/moodetail-backend).  This app is for keeping track of what prompts certain moods, and to distinguish between those that are within your control and those that are out of your control. 
 
 ## Installing
 
