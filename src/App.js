@@ -4,7 +4,8 @@ import {Route, Switch} from 'react-router-dom';
 import {Navbar, Nav} from 'react-bootstrap';
 
 import About from './components/About';
-import MoodsContainer from './containers/MoodsContainer';
+import Moods from './components/Moods';
+// import MoodsContainer from './containers/MoodsContainer';
 import Mood from './components/Mood';
 import {fetchMoods} from './actions/fetchMoods';
 
@@ -24,7 +25,8 @@ class App extends Component {
         
         <Switch>
           <Route path='/moods/:feeling' render={(routerProps) => <Mood {...routerProps} moods={this.props.moods} />} />
-          <Route path='/moods' render={(routerProps) => <MoodsContainer {...routerProps} moods={this.props.moods}/>} />
+          <Route path='/moods' render={(routerProps) => <Moods {...routerProps} moods={this.props.moods}/>} />
+          {/* <Route path='/moods' render={(routerProps) => <MoodsContainer {...routerProps} moods={this.props.moods}/>} /> */}
           <Route path='/' component={About} />
         </Switch>
       </>
