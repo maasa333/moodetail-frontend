@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
-import {Route, Switch} from 'react-router-dom';
-import {Navbar, Nav} from 'react-bootstrap';
+import { Route, Switch } from 'react-router-dom';
+import { Navbar, Nav } from 'react-bootstrap';
 
 import About from './components/About';
 import Moods from './components/Moods';
-// import MoodsContainer from './containers/MoodsContainer';
 import Mood from './components/Mood';
-import {fetchMoods} from './actions/fetchMoods';
+import { fetchMoods } from './actions/fetchMoods';
 
 class App extends Component {
 
@@ -19,16 +18,21 @@ class App extends Component {
     return (
       <>
         <Navbar bg='light' variant='light'>
-          <Nav.Link href='/' >About</Nav.Link>
-          <Nav.Link href='/moods' >All Moods</Nav.Link>
+          <Navbar.Brand>
+            <h2>MOO<span className='fliph'>D</span>etail</h2>
+          </Navbar.Brand>
+          <Navbar.Collapse className='justify-content-end'>
+            <Nav.Link href='/' >About</Nav.Link>
+            <Nav.Link href='/moods' >All Moods</Nav.Link>
+          </Navbar.Collapse>
         </Navbar>
         
         <Switch>
           <Route path='/moods/:feeling' render={(routerProps) => <Mood {...routerProps} moods={this.props.moods} />} />
           <Route path='/moods' render={(routerProps) => <Moods {...routerProps} moods={this.props.moods}/>} />
-          {/* <Route path='/moods' render={(routerProps) => <MoodsContainer {...routerProps} moods={this.props.moods}/>} /> */}
           <Route path='/' component={About} />
         </Switch>
+        
       </>
     );
   }

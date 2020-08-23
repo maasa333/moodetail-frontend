@@ -1,6 +1,6 @@
 # MOODetail (frontend)
 
-MOODetail is a Single Page Application using React/Redux on the frontend and a Rails API backend.  This repository is for the React/Redux frontend (the backend can be found at https://github.com/maasa333/moodetail-backend).  This app is for keeping track of what prompts certain moods, and to distinguish between those that are within your control and those that are out of your control. 
+MOODetail is a Single Page Application using React/Redux on the frontend and a Rails API backend.  This repository is for the React/Redux frontend (the backend can be found at https://github.com/maasa-k/moodetail-backend).  This app is for keeping track of what prompts certain moods, and to distinguish between those that are within your control and those that are out of your control. 
 
 ## Installing
 
@@ -25,7 +25,7 @@ After seeding the database for the mood states through the Rails API backend (se
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/maasa333/moodetail-frontend. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/maasa-k/moodetail-frontend. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## License
 
@@ -33,4 +33,4 @@ This is available as open source under the terms of the [MIT License](https://op
 
 ## Code of Conduct
 
-Everyone interacting in the MOODetail project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/maasa333/moodetail-frontend/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the MOODetail project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/maasa-k/moodetail-frontend/blob/master/CODE_OF_CONDUCT.md).

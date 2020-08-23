@@ -1,0 +1,23 @@
+h2 {
+    color: blue;
+    text-align: center;
+}
+
+.fliph {
+    display: inline-block;
+    vertical-align: top;
+    transform: scaleX(-1);
+    -ms-filter: fliph;
+    filter: fliph;
+}
+
+p {
+    font-size: larger;
+}
+
+body {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+    background-size: cover;
+}

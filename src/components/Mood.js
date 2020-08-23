@@ -1,6 +1,4 @@
-// import React from 'react';
-import { React, useState } from 'react';
-// import Image from 'react-bootstrap/Image';
+import React from 'react';
 import { Image } from 'react-bootstrap';
 
 import PromptsContainer from '../containers/PromptsContainer';
@@ -11,22 +9,17 @@ const Mood = props => {
     
     const prompts = mood && mood.prompts;
 
-    // Figure out how to initialize state here (maybe with hooks) so I don't have to use conditional rendering
-    // const image = mood && mood.feeling.toLowerCase();
-    // console.log(image)
-        
     return (
         <>
             <h3>{mood && mood.feeling}</h3>
             <br/>
-            <Image src={require(`../images/${mood.feeling.toLowerCase()}.png`)} />
+            {/* <Image src={(`../images/${mood.feeling.toLowerCase()}.png`)} /> */}
             <PromptsContainer mood={mood} prompts={prompts} />
         </>
     )
 }
 
 export default Mood;
-
 
 // Trying to resolve invalid url path, but the initial render of causing redirect even for valid moods:
 
