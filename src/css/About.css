@@ -20,6 +20,7 @@ p {
 }
 
 body {
+    background-image: url('../images/frame.png');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center; 
@@ -28,5 +29,13 @@ body {
 }
 
 .mood-img {
-    opacity: 0.2;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    height: 30%;
+}
+
+.about {
+    margin-top: 70px;
 }
