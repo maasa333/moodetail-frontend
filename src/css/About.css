@@ -3,6 +3,10 @@ h2 {
     text-align: center;
 }
 
+h3 {
+    text-align: center;
+}
+
 .fliph {
     display: inline-block;
     vertical-align: top;
@@ -20,4 +24,9 @@ body {
     background-attachment: fixed;
     background-position: center; 
     background-size: cover;
+    padding-top: 80px;
+}
+
+.mood-img {
+    opacity: 0.2;
 }

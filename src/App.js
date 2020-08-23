@@ -17,7 +17,7 @@ class App extends Component {
   render() {
     return (
       <>
-        <Navbar bg='light' variant='light'>
+        <Navbar fixed='top' bg='light' variant='light'>
           <Navbar.Brand>
             <h2>MOO<span className='fliph'>D</span>etail</h2>
           </Navbar.Brand>
@@ -32,7 +32,6 @@ class App extends Component {
           <Route path='/moods' render={(routerProps) => <Moods {...routerProps} moods={this.props.moods}/>} />
           <Route path='/' component={About} />
         </Switch>
-        
       </>
     );
   }

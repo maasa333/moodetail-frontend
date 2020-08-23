@@ -13,7 +13,7 @@ const Mood = props => {
         <>
             <h3>{mood && mood.feeling}</h3>
             <br/>
-            {/* <Image src={(`../images/${mood.feeling.toLowerCase()}.png`)} /> */}
+            <Image src={mood && require(`../images/${mood.feeling.toLowerCase()}.png`)} className='mood-img' />
             <PromptsContainer mood={mood} prompts={prompts} />
         </>
     )
