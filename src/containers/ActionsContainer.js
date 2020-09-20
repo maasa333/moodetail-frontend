@@ -3,6 +3,7 @@ import {Accordion, Button, Card} from 'react-bootstrap';
 import { connect } from 'react-redux';
 
 import {deletePrompt} from '../actions/deletePrompt';
+import TryClickingMeButton from '../components/TryClickingMeButton';
 
 class ActionsContainer extends Component {
 
@@ -10,11 +11,11 @@ class ActionsContainer extends Component {
         props.deletePrompt(props.prompt.id, props.prompt.mood_id)
     }
 
-    clickMeButton = (props) => {
+    handleAltButton = (props) => {
         if (props.prompt.controllable === true) {
             return <Button size='sm' variant='outline-primary' >Notes</Button>
         } else {
-            return <Button size='sm' variant='outline-primary' >Try Clicking Me</Button>
+            return <TryClickingMeButton props={props} ></TryClickingMeButton>
         }
     }
 
@@ -24,7 +25,8 @@ class ActionsContainer extends Component {
                 <Accordion.Collapse>
                     <Card.Body>
                         <Button size='sm' variant='outline-danger' onClick={() => this.handleDelete(this.props)}>Delete</Button>
-                        {this.clickMeButton(this.props)}
+                        <span>  </span>
+                        {this.handleAltButton(this.props)}
                     </Card.Body>
                 </Accordion.Collapse>
             </div>
