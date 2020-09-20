@@ -3,7 +3,7 @@ import {Card} from 'react-bootstrap';
 import Prompt from './Prompt';
 
 const UncontrollablePrompts = props => {
-
+    
     return (
         <div> 
             <Card>

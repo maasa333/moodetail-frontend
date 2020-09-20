@@ -7,7 +7,7 @@ const Moods = props => {
         <div>
             <CardColumns className='text-center'>
                 {props.moods.map(mood => 
-                    <Card key={mood.id} border='primary' style={{width: '20rem'}} >
+                    <Card key={mood.id} border='light' style={{width: '20rem'}} className='shadow p-3 mb-5 bg-white rounded' >
                         <Card.Img variant='top' src={require(`../images/${mood.feeling.toLowerCase()}.png`)} />
                         <Card.Body className='text-center' >
                             <Card.Link className='stretched-link' href={`/moods/${mood.feeling}`} ><h5>{mood.feeling}</h5></Card.Link>
