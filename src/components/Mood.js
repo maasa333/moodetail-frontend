@@ -20,19 +20,3 @@ const Mood = props => {
 }
 
 export default Mood;
-
-// Trying to resolve invalid url path, but the initial render of causing redirect even for valid moods:
-
-// const feelings = props.moods.map(mood => mood.feeling.toLowerCase())
-
-// const redirectIfNecessary = () => {
-//     if (mood && feelings.includes(props.location.pathname.split('/').pop())) {
-//         return (
-//             <h3>{mood.feeling}</h3>
-//             // <br/>,
-//             // <PromptsContainer mood={mood} prompts={prompts} />
-//             )
-//         } else {
-//             return <Redirect to='/moods'/>
-//         }
-//     }

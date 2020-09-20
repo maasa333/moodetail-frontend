@@ -10,7 +10,7 @@ const Moods = props => {
                     <Card key={mood.id} border='primary' style={{width: '20rem'}} >
                         <Card.Img variant='top' src={require(`../images/${mood.feeling.toLowerCase()}.png`)} />
                         <Card.Body className='text-center' >
-                            <Card.Link href={`/moods/${mood.feeling}`} ><h5>{mood.feeling}</h5></Card.Link>
+                            <Card.Link className='stretched-link' href={`/moods/${mood.feeling}`} ><h5>{mood.feeling}</h5></Card.Link>
                         </Card.Body>
                     </Card>
                 )}
