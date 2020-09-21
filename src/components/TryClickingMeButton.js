@@ -4,7 +4,7 @@ import {Button} from 'react-bootstrap';
 const TryClickingMeButton = (props) => {
 
     const handleClick = () => {
-        console.log('I clicked this')
+        console.log(props)
     }
 
     return (
