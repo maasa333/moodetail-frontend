@@ -10,12 +10,18 @@ const Mood = props => {
     const prompts = mood && mood.prompts;
 
     return (
-        <>
-            <h3>{mood && mood.feeling}</h3>
-            <br/>
-            <Image src={mood && require(`../images/${mood.feeling.toLowerCase()}.png`)} className='mood-img' fluid rounded/>
+        <div>
+            <h3 className='display-mood'>{mood && mood.feeling}</h3>
+            
+            <Image 
+                src={mood && require(`../images/${mood.feeling.toLowerCase()}.png`)} 
+                className='mood-img' 
+                fluid 
+                rounded
+            />
+
             <PromptsContainer mood={mood} prompts={prompts} />
-        </>
+        </div>
     )
 }
 

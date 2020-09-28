@@ -15,7 +15,8 @@ class ActionsContainer extends Component {
         if (props.prompt.controllable === true) {
             return <Button size='sm' variant='outline-primary' >Notes</Button>
         } else {
-            return <TryClickingMeButton props={this.props} ></TryClickingMeButton>
+            return <Button size='sm' variant='outline-primary' >Try Clicking Me</Button>
+            // return <TryClickingMeButton props={this.props} ></TryClickingMeButton>
         }
     }
 
