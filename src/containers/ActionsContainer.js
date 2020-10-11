@@ -3,7 +3,9 @@ import {Accordion, Button, Card} from 'react-bootstrap';
 import { connect } from 'react-redux';
 
 import {deletePrompt} from '../actions/deletePrompt';
+import {addNote} from '../actions/addNote';
 import TryClickingMeButton from '../components/TryClickingMeButton';
+import Notes from '../components/Notes.js';
 
 class ActionsContainer extends Component {
 
@@ -11,12 +13,16 @@ class ActionsContainer extends Component {
         props.deletePrompt(props.prompt.id, props.prompt.mood_id)
     }
 
-    handleAltButton = (props) => {
+    handleNotes = (props) => {
+        return <Notes></Notes>
+        // props.addNote(props.prompt.id, props.prompt.mood_id)
+    }
+
+    renderAltButtons = (props) => {
         if (props.prompt.controllable === true) {
-            return <Button size='sm' variant='outline-primary' >Notes</Button>
+            return <Button id='notes-button' size='sm' variant='outline-primary' onClick={() => this.handleNotes(props)} >Notes</Button>
         } else {
             return <Button size='sm' variant='outline-primary' >Try Clicking Me</Button>
-            // return <TryClickingMeButton props={this.props} ></TryClickingMeButton>
         }
     }
 
@@ -27,7 +33,7 @@ class ActionsContainer extends Component {
                     <Card.Body>
                         <Button size='sm' variant='outline-danger' onClick={() => this.handleDelete(this.props)}>Delete</Button>
                         <span>  </span>
-                        {this.handleAltButton(this.props)}
+                        {this.renderAltButtons(this.props)}
                     </Card.Body>
                 </Accordion.Collapse>
             </div>
@@ -35,4 +41,4 @@ class ActionsContainer extends Component {
     }
 }
 
-export default connect(null, {deletePrompt})(ActionsContainer);
+export default connect(null, {deletePrompt, addNote})(ActionsContainer);

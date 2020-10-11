@@ -1,5 +1,4 @@
 import React from 'react';
-import { Image } from 'react-bootstrap';
 
 import PromptsContainer from '../containers/PromptsContainer';
 
@@ -13,12 +12,8 @@ const Mood = props => {
         <div>
             <h3 className='display-mood'>{mood && mood.feeling}</h3>
             
-            <Image 
-                src={mood && require(`../images/${mood.feeling.toLowerCase()}.png`)} 
-                className='mood-img' 
-                fluid 
-                rounded
-            />
+            <img className='mood-img' src={mood && require(`../images/${mood.feeling.toLowerCase()}.png`)} >
+            </img>
 
             <PromptsContainer mood={mood} prompts={prompts} />
         </div>
