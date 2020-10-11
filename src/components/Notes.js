@@ -1,26 +1,11 @@
-import React, { Component } from 'react';
-import {Form, Button, Card, Col, Row, Accordion} from 'react-bootstrap';
-import { connect } from 'react-redux';
-import {addNote} from '../actions/addNote';
+import React from 'react';
 
-class Notes extends Component {
-    state = {
-        desc: ''
-    }
-
-    render() {
-        return (
-            <div>
-                Notes Component
-                {/* <Form>
-                    <Form.Control placeholder='Enter note'>
-                    </Form.Control>
-
-                    <Button type='submit'>Submit</Button>
-                </Form> */}
-            </div>
-        );
-    }
+const Notes = () => {
+    return (
+        <div>
+            List of Notes
+        </div>
+    );
 }
 
 export default Notes;

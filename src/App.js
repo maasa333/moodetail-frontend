@@ -6,7 +6,7 @@ import { Navbar, Nav } from 'react-bootstrap';
 import About from './components/About';
 import Moods from './components/Moods';
 import Mood from './components/Mood';
-import Notes from './components/Notes';
+import NotesContainer from './containers/NotesContainer';
 import { fetchMoods } from './actions/fetchMoods';
 
 class App extends Component {
@@ -29,7 +29,7 @@ class App extends Component {
         </Navbar>
         
         <Switch>
-          <Route path='/moods/:feeling/prompts/:id/notes' render={(routerProps) => <Notes {...routerProps} notes={this.props.notes}/>} />
+          <Route path='/moods/:feeling/prompts/:id/notes' render={(routerProps) => <NotesContainer {...routerProps} notes={this.props.notes}/>} />
           <Route path='/moods/:feeling' render={(routerProps) => <Mood {...routerProps} moods={this.props.moods} />} />
           <Route path='/moods' render={(routerProps) => <Moods {...routerProps} moods={this.props.moods}/>} />
           <Route path='/' component={About} />

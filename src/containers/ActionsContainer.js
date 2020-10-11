@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import {deletePrompt} from '../actions/deletePrompt';
 import {addNote} from '../actions/addNote';
 import TryClickingMeButton from '../components/TryClickingMeButton';
-import Notes from '../components/Notes.js';
+import NotesContainer from './NotesContainer.js';
 
 class ActionsContainer extends Component {
 
@@ -14,7 +14,7 @@ class ActionsContainer extends Component {
     }
 
     handleNotes = (props) => {
-        return <Notes></Notes>
+        return <NotesContainer />
         // props.addNote(props.prompt.id, props.prompt.mood_id)
     }
 
