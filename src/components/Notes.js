@@ -11,6 +11,7 @@ class Notes extends Component {
     render() {
         return (
             <div>
+                Notes Component
                 {/* <Form>
                     <Form.Control placeholder='Enter note'>
                     </Form.Control>
