@@ -6,8 +6,8 @@ const ControllablePrompts = props => {
 
     return (
         <div>
-            <Card>
-                <Card.Header as='h5'>Within my control</Card.Header>
+            <Card className='prompt-box'>
+                <Card.Header className='prompt-box-header' as='h5'>Within my control</Card.Header>
                 <Card.Body>
                     {props.prompts && props.prompts.map(prompt => 
                         <Card.Text key={prompt.id} as='span'>

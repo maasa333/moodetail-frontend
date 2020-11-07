@@ -4,8 +4,11 @@ import { connect } from 'react-redux';
 
 import {deletePrompt} from '../actions/deletePrompt';
 import {addNote} from '../actions/addNote';
-import TryClickingMeButton from '../components/TryClickingMeButton';
-import NotesContainer from './NotesContainer.js';
+
+// COMMENTED OUT NEW FEATURES I'M WORKING ON
+
+// import TryClickingMeButton from '../components/TryClickingMeButton';
+// import NotesContainer from './NotesContainer.js';
 
 class ActionsContainer extends Component {
 
@@ -13,18 +16,18 @@ class ActionsContainer extends Component {
         props.deletePrompt(props.prompt.id, props.prompt.mood_id)
     }
 
-    handleNotes = (props) => {
-        return <NotesContainer />
-        // props.addNote(props.prompt.id, props.prompt.mood_id)
-    }
+    // handleNotes = (props) => {
+    //     return <NotesContainer />
+    //     // props.addNote(props.prompt.id, props.prompt.mood_id)
+    // }
 
-    renderAltButtons = (props) => {
-        if (props.prompt.controllable === true) {
-            return <Button id='notes-button' size='sm' variant='outline-primary' onClick={() => this.handleNotes(props)} >Notes</Button>
-        } else {
-            return <Button size='sm' variant='outline-primary' >Try Clicking Me</Button>
-        }
-    }
+    // renderAltButtons = (props) => {
+    //     if (props.prompt.controllable === true) {
+    //         return <Button id='notes-button' size='sm' variant='outline-primary' onClick={() => this.handleNotes(props)} >Notes</Button>
+    //     } else {
+    //         return <Button size='sm' variant='outline-primary' >Try Clicking Me</Button>
+    //     }
+    // }
 
     render() {
         return (
@@ -32,8 +35,8 @@ class ActionsContainer extends Component {
                 <Accordion.Collapse>
                     <Card.Body>
                         <Button size='sm' variant='outline-danger' onClick={() => this.handleDelete(this.props)}>Delete</Button>
-                        <span>  </span>
-                        {this.renderAltButtons(this.props)}
+                        {/* <span>  </span>
+                        {this.renderAltButtons(this.props)} */}
                     </Card.Body>
                 </Accordion.Collapse>
             </div>

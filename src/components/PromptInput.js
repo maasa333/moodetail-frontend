@@ -45,7 +45,7 @@ class PromptInput extends Component {
     render() {
         return (
             <div>
-                <Card>
+                <Card className='prompt-input'>
                     <Card.Body>
                         <Form onSubmit={event => this.handleOnSubmit(event)}>
                             <Form.Group as={Row}>

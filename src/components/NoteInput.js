@@ -1,15 +1,22 @@
+// WORKING ON NEW FEATURE
+
 import React, { useState } from 'react';
 import {Form, Button} from 'react-bootstrap';
 import { connect } from 'react-redux';
-// import {addNote} from '../actions/addNote';
+import {addNote} from '../actions/addNote';
 
-const NoteInput = () => {
+const NoteInput = (props) => {
     const [input, setInput] = useState('');
 
-    console.log(input)
+    const handleOnSubmit = (event) => {
+        event.preventDefault();
+        debugger
+        props.addNote(input);
+    }
+
     return (
         <div>
-            <Form>
+            <Form onSubmit={event => handleOnSubmit(event)}>
                 <Form.Control
                     onChange={event => setInput(event.target.value)}
                     placeholder='Enter note'>
@@ -20,4 +27,4 @@ const NoteInput = () => {
     );
 }
 
-export default NoteInput;
+export default connect(null, {addNote})(NoteInput);

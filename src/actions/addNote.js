@@ -1,5 +1,8 @@
+// WORKING ON NEW FEATURE
+
 export const addNote = (promptID, moodID) => {
     return dispatch => {
+        debugger
         fetch(`http://localhost:3001/api/v1/moods/${moodID}/prompts/${promptID}/notes`, {
             method: 'POST',
             headers: {

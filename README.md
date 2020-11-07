@@ -1,6 +1,6 @@
 # MOODetail (frontend)
 
-MOODetail is a Single Page Application using React/Redux on the frontend and a Rails API backend.  This repository is for the React/Redux frontend (the backend can be found at https://github.com/maasa-k/moodetail-backend).  This app is for keeping track of what prompts certain moods, and to distinguish between those that are within your control and those that are out of your control. 
+MOODetail is a Single Page Application using React/Redux on the frontend and a Rails API backend with PostgreSQL handling the backend.  This repository is for the React/Redux frontend (the backend can be found at https://github.com/maasa-k/moodetail-backend).  This app is for keeping track of what prompts certain moods, and to distinguish between those that are within your control and those that are out of your control. 
 
 ## Installing
 
@@ -22,6 +22,10 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 ## Usage
 
 After seeding the database for the mood states through the Rails API backend (separate repository), you can begin entering descriptions of promtps to various moods.  From the moods index page, click on a mood to see that mood's show page which includes the input form for entering a new prompt.  Once submitted, the description will append to either the "Within my control" or "Out of my control" card and will save to the database. 
+
+## New Feature Pending
+
+New feature of adding notes to prompts is pending at this time. 
 
 ## Contributing
 

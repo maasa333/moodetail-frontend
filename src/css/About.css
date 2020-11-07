@@ -20,7 +20,7 @@ p {
 }
 
 body {
-    background-image: url('../images/frame.png');
+    background-image: url('../images/background.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center; 
@@ -44,5 +44,22 @@ body {
 }
 
 .about {
-    margin-top: 70px;
+    text-align: center;
+    min-height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.prompt-box-header {
+    text-align: center;
+}
+
+.prompt-box {
+    margin-bottom: 10px;
+}
+
+.prompt-input {
+    margin-left: 62px;
+    margin-right: 62px;
 }
